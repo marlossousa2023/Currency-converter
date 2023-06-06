@@ -1,7 +1,8 @@
 const convertButton = document.querySelector(".convert-button")
 const currencyToConvert = document.querySelector(".currency-to-convert")
-const currencySelect = document.querySelector(".currency-select")
 const currencyValueConverted = document.querySelector(".currency-value")
+const currencySelect= document.querySelector(".currency-select")
+
 
 
 function convertValues() {
@@ -67,6 +68,27 @@ function convertValues() {
         }).format(inputCurrencyValue)
     }
 
+
+    if(currencyToConvert.value == "real-to-convert" && currencySelect.value == "real"){
+        alert("Não é possivel converter a mesma moeda")
+    }
+
+    if(currencyToConvert.value == "dolar-to-convert" && currencySelect.value == "dolar"){
+        alert("Não é possivel converter a mesma moeda")
+    }
+
+    if(currencyToConvert.value == "euro-to-convert" && currencySelect.value == "euro"){
+        alert("Não é possivel converter a mesma moeda")
+    }
+
+    if(currencyToConvert.value == "libra-to-convert" && currencySelect.value == "libra"){
+        alert("Não é possivel converter a mesma moeda")
+    }
+
+    if(currencyToConvert.value == "peso-to-convert" && currencySelect.value == "peso-argentino"){
+        alert("Não é possivel converter a mesma moeda")
+    }
+        
     if (currencyToConvert.value == "dolar-to-convert" && currencySelect.value == "real") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
@@ -212,11 +234,12 @@ function convertValues() {
     }
 }
 
+
+
+
 function changeFirstCurrency() {
     const firstCurrency = document.querySelector("#first-currency")
     const changeFlag = document.querySelector("#change-flag")
-
-
 
 
     if (currencyToConvert.value == 'real-to-convert') {
@@ -248,45 +271,43 @@ function changeFirstCurrency() {
 }
 
 function secondChange(){
-
-    const currencyName = document.querySelector(".currency-name")
+    const currencySelect = document.querySelector(".currency-select").value
+    const currencyName = document.querySelector("#currency-name")
     const currencyImage = document.querySelector("#second-currency")
 
-if (currencySelect.value == 'real') {
-    currencyName.innerHTML = "Real Brasileiro"
-    currencyImage.src = "./assets/Real.png"
-}
 
-if (currencySelect.value == 'dolar') {
-    currencyName.innerHTML = "Dolar Americano"
+    if (currencySelect == 'dolar'){
+    currencyName.innerHTML = 'Dolar Americano'
     currencyImage.src = "./assets/Dolar.png"
 }
 
-if (currencySelect.value == 'euro') {
-    currencyName.innerHTML = 'euro'
+if (currencySelect == 'euro'){
+    currencyName.innerHTML = 'Euro'
     currencyImage.src = "./assets/Euro.png"
 }
 
-
-if (currencySelect.value == 'libra') {
-    currencyName.innerHTML = "Libra"
+if (currencySelect == 'libra'){
+    currencyName.innerHTML = 'Libra'
     currencyImage.src = "./assets/libra.png"
 }
 
-if (currencySelect.value == 'peso-argentino') {
-    currencyName.innerHTML = "Peso Argentino"
+if (currencySelect == 'peso-argentino'){
+    currencyName.innerHTML = 'Peso argentino'
     currencyImage.src = "./assets/argentina.png"
 }
 
-convertValues()
-
+if (currencySelect == 'real'){
+    currencyName.innerHTML = 'Brasil'
+    currencyImage.src = "./assets/Real.png"
 }
+convertValues()
+}
+
+
+
+
+
 
 convertButton.addEventListener('click', convertValues)
 currencyToConvert.addEventListener('change', changeFirstCurrency)
-currencySelect.addEventListener('change',secondChange)
-
-
-
-
-
+currencySelect.addEventListener('change', secondChange)
