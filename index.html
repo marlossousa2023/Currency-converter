@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <title>Conversor de Moedas - Dev Club</title>
 </head>
@@ -19,8 +19,12 @@
     <main>
         <label>Converter <b>de</b>
             <br>
-            <select>
-                <option>R$ Real Brasileiro</option>
+            <select class="currency-to-convert">
+                <option value="real-to-convert">R$ Real Brasileiro</option>
+                <option value="dolar-to-convert">US$ Dolar Americano</option>
+                <option value="euro-to-convert">€ Euro</option>
+                <option value="libra-to-convert">£ Libra</option>
+                <option value="peso-to-convert">$ Peso Argentino</option>
             </select>
         </label>
 
@@ -31,6 +35,7 @@
                 <option value="euro">€ Euro</option>
                 <option value="libra">£ Libra</option>
                 <option value="peso-argentino">$ Peso Argentino</option>
+                <option value="real">R$ Real Brasileiro</option>
             </select>
             <br>
         </label>
@@ -46,8 +51,8 @@
 
         <section>
             <div class="currency-box">
-                <img src="./assets/Real.png" alt="logo-moeda-a-converter">
-                <p class="currency">Real</p>
+                <img class="currency-img" id="change-flag" src="./assets/Real.png" alt="logo-moeda-a-converter">
+                <p class="currency" id="first-currency">Real</p>
                 <p class="currency-value-to-convert">R$ 0</p>
             </div>
 
@@ -57,7 +62,7 @@
 
 
             <div class="currency-box">
-                <img class="currency-img" src="./assets/Dolar.png" alt="logo-moeda-convertida">
+                <img class="currency-img" id="second-currency" src="./assets/Dolar.png" alt="logo-moeda-convertida">
                 <p class="currency" id="currency-name">Dolar Americano</p>
                 <p class="currency-value">US$ 0</p>
             </div>
