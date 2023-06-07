@@ -16,4 +16,6 @@
   
     <p>Abaixo segue imagem do conversor: </p>
     
+<img src="https://raw.githubusercontent.com/marlossousa2023/Currency-converter/d3bcc48a9afdf7beadce972dcb34bf54ce997507/assets/currency.jpg">
+    
     
