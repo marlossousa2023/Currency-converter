@@ -14,8 +14,8 @@
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"><br>
   <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)">
   
-    <p>Abaixo segue imagem do conversor: </p>
+    <p>Abaixo segue imagens do conversor: </p>
     
-<img src="https://raw.githubusercontent.com/marlossousa2023/Currency-converter/d3bcc48a9afdf7beadce972dcb34bf54ce997507/assets/currency.jpg">
+<img src="https://github.com/marlossousa2023/Currency-converter/blob/master/assets/Currency-converter3.png?raw=true">
     
-    
+<img src="https://github.com/marlossousa2023/Currency-converter/blob/master/assets/Currency-converter2.png?raw=true">  
